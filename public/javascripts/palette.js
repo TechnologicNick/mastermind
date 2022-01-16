@@ -34,4 +34,9 @@ class Palette {
         this.colors.pop() !== undefined && this.onChange?.(this.colors);
     }
 
+    clear() {
+        this.colors = [];
+        this.onChange?.(this.colors);
+    }
+
 }

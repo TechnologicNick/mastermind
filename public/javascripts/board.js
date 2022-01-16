@@ -30,3 +30,12 @@ Board.prototype.applyRows = function(/** @type {{ colors?: number[]; correct?: n
         });
     });
 }
+
+Board.prototype.nextRow = function(){
+    if(this.currentRow >= 6){
+        return false;
+    } else{
+        this.currentRow++;
+        return true;
+    }
+}

@@ -43,13 +43,13 @@ wss.on("connection", (socket) => {
     
     socket.on("message", (message) => {
         try {
-            message = JSON.parse(message);
+            message = JSON.parse(message.toString());
             console.log("[LOG]", message);
         } catch(ex) {
             console.error(`Non-JSON message received: ${message}`);
         }
         
-        
+
     });
 
     socket.on("close", () => {
