@@ -1,4 +1,4 @@
-/// @ts-check
+// @ts-check
 
 class Palette {
 
@@ -31,7 +31,7 @@ class Palette {
     }
 
     removeColor() {
-        this.colors.pop() && this.onChange?.(this.colors);
+        this.colors.pop() !== undefined && this.onChange?.(this.colors);
     }
 
 }

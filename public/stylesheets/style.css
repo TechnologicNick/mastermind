@@ -28,6 +28,7 @@ header {
     background-image: var(--primary-gradient);
     color: white;
     margin-bottom: 1rem;
+    z-index: 100;
 }
 
 main {
@@ -59,6 +60,31 @@ header h1 {
     margin: 2rem 0;
 }
 
+.modal::after {
+    content: "";
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    inset: 0px;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+.modal {
+    width: min(100%, 400px);
+    height: fit-content;
+    position: fixed;
+    inset: 0px;
+    background-color: #505050;
+    margin: auto auto;
+    z-index: 10;
+    padding: 3rem;
+    border-radius: 0.5rem;
+}
+
+.display-none {
+    display: none;
+}
 
 .show{
     animation: show 0.5s linear 0.1s forwards;
