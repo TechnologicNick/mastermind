@@ -76,12 +76,16 @@ window.addEventListener("DOMContentLoaded", () => {
                     document.querySelector(".gamebtn.confirm").disabled = true;
                 } else if (message.result === "lost") {
                     createAlert("<h1>Another player won!</h1>\nBetter luck next time.", true);
+                    socket.close();
                 } else if (message.result === "won") {
                     createAlert("<h1>Winner\nWinner\nChicken\nDinner🐔</h1>", true);
+                    socket.close();
                 } else if (message.result === "draw") {
                     createAlert("<h1>The game ended in a draw!</h1>\nNobody guessed the code", true)
+                    socket.close();
                 } else if (message.result === "abort") {
                     createAlert("<h1>Not enough players left</h1>", true);
+                    socket.close();
                 }
             } 
         }
