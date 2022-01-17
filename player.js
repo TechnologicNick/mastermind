@@ -40,9 +40,4 @@ module.exports = class Player extends EventEmitter{
         this.game = game;
     }
 
-    nextRow(){
-        this.guessIndex++;
-        return this.guessIndex < 7;
-    }
-
 }

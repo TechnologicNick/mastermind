@@ -132,3 +132,13 @@ header h1 {
         opacity: 100%;
     }
 }
+
+.screenwarning{
+    display: none;
+}
+
+@media (max-width: 1100px) {
+    .screenwarning{
+        display: block;
+    }
+}

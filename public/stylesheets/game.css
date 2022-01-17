@@ -1,9 +1,12 @@
 :root {
+    /* TUDelft secondary colors */
     --game-color-0: #0076C2;
     --game-color-1: #6F1D77;
     --game-color-2: #A50034;
     --game-color-3: #6CC24A;
     --game-color-4: #FFB81C;
+
+    /* TUDelft primary colors */
     --game-color-correct: #000000;
     --game-color-misplaced: #FFFFFF;
 
