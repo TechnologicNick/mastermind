@@ -23,7 +23,7 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
 app.get("/", (req, res) => {
-    res.render("splash.ejs", stat.stats);
+    res.render("splash.ejs", Object.assign({ lobbySize }, stat.stats));
 })
 
 app.get("/play", (req, res) => {
