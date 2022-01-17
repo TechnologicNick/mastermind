@@ -5,6 +5,9 @@
   "scripts": {
     "start": "node ./app.js 3000"
   },
+  "engines": {
+    "node": "16.x"
+  },
   "dependencies": {
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
