@@ -1,9 +1,9 @@
 // @ts-check
 
-const EventEmitter = require("events");
+const Emitter = require("./emitter");
 const Player = require("./player");
 
-module.exports = class Queue extends EventEmitter {
+module.exports = class Queue extends Emitter {
 
     constructor() {
         super();

@@ -1,10 +1,10 @@
 // @ts-check
 
-const EventEmitter = require("events");
+const Emitter = require("./emitter");
 const WebSocket = require("ws");
 const Mastermind = require("./mastermind");
 
-module.exports = class Player extends EventEmitter{
+module.exports = class Player extends Emitter {
 
     /**
      * @param {WebSocket} socket
