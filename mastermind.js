@@ -1,6 +1,5 @@
 // @ts-check
 
-const { randomInt } = require("crypto");
 const Player = require("./player");
 
 module.exports = class Mastermind {
@@ -15,7 +14,7 @@ module.exports = class Mastermind {
         /** @type number[] */
         this.code = [];
         for (let i = 0; i < 4; i++) {
-            this.code.push(randomInt(5));
+            this.code.push(Math.floor(Math.random() * 5));
         }
     }
 
