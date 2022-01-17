@@ -8,7 +8,8 @@ const Player = require("./player");
 const Queue = require("./queue");
 const Stats = require("./stats");
 
-const port = process.argv[2];
+const port = process.argv[2] ?? 3000;
+const lobbySize = process.argv[3] ?? 2;
 const app = express();
 const stat = new Stats();
 
@@ -34,8 +35,8 @@ const queue = new Queue();
 queue.on("add", (/** @type Player */ player, position, players) => {
     queue.sendPosition(player);
 
-    while (queue.players.length >= 2) {
-        const game = new Mastermind(queue.popFirst(2));
+    while (queue.players.length >= lobbySize) {
+        const game = new Mastermind(queue.popFirst(lobbySize));
         stat.stats.gamesPlayed++;
         stat.saveStats();   
         game.setStats(stat);
