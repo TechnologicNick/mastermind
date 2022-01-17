@@ -2,7 +2,6 @@ const path = require("path");
 const express = require("express");
 const http = require("http");
 const WebSocket = require("ws");
-const fs = require("fs");
 
 const Mastermind = require("./mastermind");
 const Player = require("./player");
